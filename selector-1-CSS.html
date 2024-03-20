@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 1</title>
+    <style>
+        * {
+            color: black;
+            background-color: blanchedalmond;
+        }   /*Untuk mengarahkan pada semua yang terdapat pada html*/
+        h2 {
+            color: black;
+        }   /*Untuk mengarahkan pada semua h2*/
+        p.success {
+            color: greenyellow;
+        }   /*Untuk mengarahkan pada p yang memiliki class "success"*/
+        p#danger {
+            color: blue;
+        }
+        #id1 {
+            color: red;
+            text-decoration: underline;
+        }   /*Untuk mengarahkan pada "id1", dan id tidak dapat multi id*/
+        .font-xs {
+            color: brown;
+            font-size: 60px;
+        }   /*Untuk mengarahkan pada class ".font-sx"*/
+        .judul {
+            font-weight: bold;
+            font-size: 30px;
+            color: aquamarine;
+        }
+        a[href] {
+            color: aqua;
+            font-size: 32px;
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
+        }
+        span#penting {
+            color: chocolate;
+            font-weight: bold;
+        }
+        p.judul {
+            color: blueviolet;
+        }
+        div p{
+            font-size: x-large;
+        }   /*Untuk mengarahkan pada semua child termasuk section*/
+        div section p {
+            font-size: small;
+        } /*Hanya untuk mengarahkan pada child section*/
+        div > p {
+            color: blue;
+        }   /*Hanya untuk mengarahkan pada child*/
+    </style>
+</head>
+<body>
+    <h1 class="font-xs">Hello World</h1>
+    <p>Check one, paragraf one</p>
+    <hr>
+    <h2 class="judul">Hello World 2</h2>
+    <p>CHeck two, paragraf two</p>
+    <hr>
+    <h3>Hello World 3</h3>
+    <p id="danger">check three, paragraf three</p>
+    <hr>
+    <h3>Hello World 4</h3>
+    <p id="id1">Login gagal</p>
+    <p class="success">Login success</p>
+    <p class="judul">Check double class danger</p>
+    <hr>
+    <a>Link not active</a>
+    <a href="https://en.wikipedia.org/wiki/WebSocket#:~:text=WebSocket%20is%20a%20computer%20communications,as%20RFC%206455%20in%202011." target="_blank">Link active</a>
+    <p class="judul">Lorem ipsum dolor sit amet, <span id="penting">Pemrograman Web Informatika</span> consectetur adipisicing elit.</p>
+    <hr>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt alias sapiente beatae hic inventore</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam at aliquid possimus fugit saepe officia</p>
+
+        <section>
+            <p>Inside section lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quasi distinctio cupiditate</p>
+            <p>Inside section lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ea officiis illum dicta</p>
+        </section>
+    </div>
+</body>
+</html>
